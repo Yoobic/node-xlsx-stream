@@ -77,8 +77,8 @@ module.exports = xlsxStream = (opts = {})->
     # static files
     for name, buffer of templates.statics
       zip.append buffer, {name, store: opts.store}
-    for name, func of templates.semiStatics
-      zip.append func(opts), {name, store: opts.store}
+    # for name, func of templates.semiStatics
+    #   zip.append func(opts), {name, store: opts.store}
 
     # files modified by number of sheets
     for name, obj of templates.sheet_related
